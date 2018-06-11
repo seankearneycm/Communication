@@ -1,0 +1,41 @@
+.THIS {
+    position:absolute;
+    height:100%;
+    width:100%;
+    background:#FFF;
+    overflow-y:hidden;
+}
+
+.THIS.oh-size {
+     height:calc(100vh);
+    overflow-y:hidden;
+}
+
+.THIS .chatterClass {
+    height: calc(61vh - 4rem);
+}
+
+.THIS .topMapContainer {
+    /*pointer-events:none;*/
+}
+
+.THIS .mapClassWrapper {
+    height: calc(39vh);
+}
+
+.THIS::-webkit-scrollbar {
+  display: none;
+}
+
+
+.THIS .chatter-map-container {
+    height: 100%;
+    background-color: #fff;   
+}
+
+.THIS .chatter-list-container {
+	height:100%;
+	/*overflow-y:scroll;*/
+	padding-bottom: 110px;
+    background-color: #FFF;
+}

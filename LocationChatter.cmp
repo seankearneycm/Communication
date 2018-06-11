@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="currentuser" type="Object" access="public"/>
+    <!--<aura:attribute name="style" type="string"/>
+    <aura:attribute name="isMobile" type="Boolean" access="private" default="true"/>
+    <aura:attribute name="mapClass" type="string" access="private" default="mapClassWrapper"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    
+    <div class="slds-is-relative oh-size">
+        <div class="topMapContainer" style="" ontouchmove="{!c.handleTouchStart}">
+            <ui:scrollerWrapper class="mapClassWrapper" aura:id="mapDiv">
+                <div class="chatter-map-container">
+                    <c:LocationChatterMap />
+                </div>
+            </ui:scrollerWrapper>
+        </div>
+        <div> 
+            <c:LocationChatterFilters />
+        </div>
+        <div ontouchmove="{!c.handleTouchMove}">
+            <ui:scrollerWrapper class="chatterClass">
+                <div class="chatter-list-container">
+                    <c:LocationChatterList />
+                </div>
+            </ui:scrollerWrapper>
+        </div>
+    </div>
+    
+    <style>
+        .flexipageDefaultAppHomeTemplate .region {
+        margin-bottom:0px !important;
+        }
+        
+        .oneFlexipage .pageBody {
+        margin-top: 0 !important;
+        }
+        
+        .flexipageDefaultAppHomeTemplate {
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+        }
+    </style>
+    
+</aura:component>
