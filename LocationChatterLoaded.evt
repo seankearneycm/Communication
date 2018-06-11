@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="chatter" Type="Object"/>
+    <aura:attribute name="currentLocation" type="Object"/>
+    <aura:attribute name="radius" type="Integer" description="measurement in meters"/>
+</aura:event>

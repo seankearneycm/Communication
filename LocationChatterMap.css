@@ -1,0 +1,18 @@
+.THIS {
+   width: 100%;
+   height: 100%;
+}
+
+.THIS.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+    -ms-touch-action: none !important;
+    touch-action: none !important;
+}
+
+.THIS.leaflet-container.leaflet-touch-drag {
+    -ms-touch-action: pinch-zoom !important;
+}
+
+.THIS.leaflet-container.leaflet-touch-zoom {
+    -ms-touch-action: pan-x pan-y !important;
+    touch-action: pan-x pan-y !important;
+}

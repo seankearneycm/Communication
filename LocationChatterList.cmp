@@ -1,0 +1,33 @@
+<aura:component controller="LocationChatterController" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="currentLocation" type="Object" access="public" description="current device geo location"/>
+    <aura:attribute name="locationChatter" type="List" />
+    <aura:attribute name="radius" type="Integer" default="100" />
+    <aura:attribute name="searchString" type="String" />
+    <aura:attribute name="locationNumber" type="Integer" />
+    <aura:registerEvent name="locationChatterLoaded" type="c:LocationChatterLoaded" />
+    <aura:handler event="c:LocationChatterFiltersChanged" action="{!c.handleLocationChatterFiltersChanged}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div>
+        <aura:if isTrue="{!v.locationChatter[0]}">
+        <div class="slds-p-around_x-small slds-m-botom_small slds-border_bottom slds-text-body_small">
+            <p>Total Locations: {!v.locationChatter.length}</p>
+        </div>
+        </aura:if>
+        <ul>
+            <aura:iteration items="{!v.locationChatter}" var="locationChat">
+                <c:LocationChatterListItem locationChat="{!locationChat}" />
+            </aura:iteration>
+        </ul>
+        <aura:if isTrue="{!!v.locationChatter[0]}">
+            <div class="no-results-message">
+                Your search returned no results
+            </div>
+            <div class="no-results-help">
+                Click the filter icon above to update your search
+            </div>
+        </aura:if>
+        <div>
+            <lightning:spinner aura:id="spinner" class="slds-hide"/>
+        </div>
+    </div>
+</aura:component>

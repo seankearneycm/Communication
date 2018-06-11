@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <aura:registerEvent name="locationChatSelected" type="c:LocationChatSelected"/>
+    <aura:attribute name="locationChat" type="Object"/>
+
+    <li class="list slds-p-around_medium slds-media slds-size_1-of-1 list-item-container" id="{!v.locationChat.id}" onclick="{!c.handleLocationChatSelected}" >
+        <div class="slds-media__figure">
+            <lightning:icon iconName="standard:account" size="medium" />
+        </div>
+        <div class="slds-media__body">
+            <span class="list-item-name">{!v.locationChat.name} #{!v.locationChat.locationNumber}</span>
+            <p class="slds-text-body_small slds-grid slds-text-color_weak slds-size_1-of-1 slds-wrap">
+                <span class="slds-m-right_medium">{!v.locationChat.street}</span><span>{!v.locationChat.city}, {!v.locationChat.state}&nbsp;&nbsp;{!v.locationChat.zip}</span>
+            </p>
+        </div>
+    </li>
+
+</aura:component>

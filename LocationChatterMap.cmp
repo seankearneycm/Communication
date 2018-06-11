@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="currentuser" type="Object" access="public"/>
+    <aura:attribute name="map" type="Object"/>
+    <aura:handler event="c:LocationChatterLoaded" action="{!c.handleLocationChatterLoaded}"/>
+    <aura:handler event="c:LocationChatSelected" action="{!c.handleLocationChatterSelected}"/>
+   <!-- <aura:handler event="c:LocationChatterFiltersChanged" action="{!c.handleChatterFilterChanged}"/>-->
+    <ltng:require styles="{!$Resource.leaflet + '/leaflet.css'}"
+                  scripts="{!$Resource.leaflet + '/leaflet.js'}"
+                    afterScriptsLoaded="{!c.jsLoaded}" /><!--/resource/leaflet/leaflet.css  /resource/leaflet/leaflet.js-->
+    <div id="map"  aura:id="map">
+    </div>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="radius" Type="Integer"/>
+    <aura:attribute name="searchString" Type="String"/>
+    <aura:attribute name="locationNumber" Type="Integer"/>
+</aura:event>

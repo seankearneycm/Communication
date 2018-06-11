@@ -1,0 +1,22 @@
+.THIS {
+    border-bottom: solid 1px #DDDDDD;
+    cursor: pointer;
+}
+
+.THIS .list-item-name {
+    display: block;
+    color: #0070d2;
+    font-weight:300;
+    font-size:1rem;   
+}
+
+.THIS a:active {
+    background-color: #E8F4FB;
+}
+
+.THIS p {
+    font-size:.75rem;
+}
+
+.THIS .list-item-container {
+}
