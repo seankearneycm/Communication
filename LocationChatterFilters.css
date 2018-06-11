@@ -1,0 +1,111 @@
+.THIS { position:absolute;
+    top:0;
+    left:0;
+    z-index:1500;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.THIS .size {
+    width:4rem;
+    height:2rem;
+}
+
+.THIS .filterWrap {
+   width: 0px;
+   overflow:hidden;
+   height: 100%;
+   text-overflow: clip;
+   white-space: nowrap;
+   /*transition: all .2s ease-in-out;*/
+}   
+
+.THIS .filterWrap.expand {
+    width: 100%;
+    background-color:rgba(0,0,0,.8);
+    overflow: hidden;
+    height: 100%;
+       text-overflow: clip;
+    white-space: nowrap;
+    transition: all .4s ease-in-out; 
+}
+
+
+.THIS label.slds-form-element__label {
+    text-align:left;
+    font-size: .8rem;
+    line-height: 1rem;
+    margin-right: .75rem;
+    margin-bottom: 0rem;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.THIS input[type='range'] {
+  box-sizing: border-box;
+  overflow: visible;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4em;
+  padding: 0 .5em 0 .5;
+  border-radius: 6px;
+  background: transparent;
+  font-size: .8em;
+  cursor: pointer;
+}
+    
+.THIS input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  z-index: 1;
+  
+  width: 9em;
+  height: 1em;
+  border-radius: 5px;
+  transform: translateY(-1px);
+  box-shadow: 0 1px #f3f6f8;
+  background: #e6e6e6;
+  /*background-image: linear-gradient(#0070D2, rgba(9, 109, 170, 0.01) 0.25em), linear-gradient(#4b8bf5, #4b8bf5);*/
+  background-repeat: no-repeat;
+  background-size: 0% 100%, 0% 100%, 100% 100%;
+}
+    
+.THIS input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -.25em;
+  box-sizing: border-box;
+  z-index: 2;
+  border: solid 1px #0070D2;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  box-shadow: 0 1px .125em #9f9ea3;
+  background: #0070D2;
+}
+
+.THIS .slds-input{
+    border-radius:.25rem !important;
+}
+
+.THIS input[type=search] {
+    border-radius:.25rem !important;
+}
+
+.THIS input[type='range']::-ms-tooltip {
+  display: none;
+}
+    
+.THIS input[type='range']:focus {
+  outline: none;
+}
+
+.THIS .lc-search-button-container {
+    padding-top: 19px;
+}
+
+.THIS .lc-filters-container {
+    padding: 0rem 1rem 2rem 1rem;
+    background:rgba(255,255,255,1);
+}
